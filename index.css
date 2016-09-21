@@ -1,11 +1,11 @@
-
 nav {
-background: white;
+  background: black;
 }
-
-.intro {    
-background: url('./images/cr.jpg') no-repeat bottom center scroll; 
-
+nav a {
+  color: white;
+}
+.intro {
+  background: url('./images/costa_rica.jpg') no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -15,30 +15,26 @@ background: url('./images/cr.jpg') no-repeat bottom center scroll;
   text-align: center;
   width: 100%;
   height: auto;
-  padding: 100px 0;
-  
+  padding: 20% 0;
 }
-
 #my_face {
-    border-radius: 50%;
-    max-width: 60%;
-    max-height: 60%;
-    padding-top: 50px;
-	padding-bottom: 50px;
+  max-height: 350px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-
-.intro h1{
-	font-size: 300%;
+.intro h1 {
+  font-size: 300%;
 }
-
 .content-section {
-	padding: 50px;
+  padding: 50px;
 }
-
 .content-section #contact-button {
-	padding: 10px 0;
+  padding: 10px 0;
 }
-
 .content-section h2 {
-	font-size: 300%;
+  font-size: 300%;
+}
+.experience-list {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

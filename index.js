@@ -1,11 +1,3 @@
 $(document).ready(function(){
-    $("#github-button").click(function(){
-        window.location.href='https://github.com/dmckee5';
-    });
-    $("#email-button").click(function(){
-        window.location.href='mailto:daniel.mckee@duke.edu';
-    });
-    $("#linkedin-button").click(function(){
-        window.location.href='https://linkedin.com/in/daniel-mckee';
-    });
+
 });
