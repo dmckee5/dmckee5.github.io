@@ -2,109 +2,158 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Daniel McKee</title>
+    <title>Daniel McKee</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link href="./index.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="./index.css" rel="stylesheet">
 
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </head>
 
 <body>
 
-  <div class="header clearfix">
-    <nav class="navbar-fixed-top">
-      <ul class="nav nav-pills pull-left">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Daniel McKee <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <ul class="nav nav-pills pull-right">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <!-- <div class="header clearfix">
+        <nav class="navbar-fixed-top">
+            <ul class="nav nav-pills pull-left">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Daniel McKee <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <ul class="nav nav-pills pull-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div> -->
 
-  <header class="intro">
-    <div class="intro-body">
-      <div class="container">
+    <!-- <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Daniel McKee</h1>
+                        <p>PhD Student in Computer Science</p>
+                        <p>University of Illinois</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+
+
+
+    <!-- About section -->
+
+    <section id="about" class="container content-section text-center">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <h1 class="brand-heading">Daniel McKee</h1>
-            <p>PhD Student in Computer Science</p>
-            <p>University of Illinois</p>
-          </div>
+            <div class="col-md-4">
+                <img id="my_face" src="./images/me.jpg">
+            </div>
+            <div class="col-md-8">
+                <h2>Daniel McKee</h2>
+                <div class="text-left">
+                    <p>I am a PhD student in Computer Science at the University of Illinois at Urbana-Champaign advised by Professor <a href="http://slazebni.cs.illinois.edu/">Svetlana Lazebnik</a>. My research interests lie within computer vision, and I
+                        am especially interested in how we can learn models from video with limited annotations for recognition and tracking.
+                    </p>
+                    <p>Before coming to UIUC I completed undergraduate degrees in Computer Science and Mathematics at Duke University.</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </section>
 
 
 
-  <!-- About section -->
+    <section id="projects" class="container content-section text-center">
+        <h2>Projects</h2>
 
-  <section id="about" class="container content-section text-center">
-    <div class="row">
-      <div class="col-md-4">
-        <img id="my_face" src="./images/me.jpg">
-      </div>
-      <div class="col-md-8">
-        <h2>About</h2>
-        <div class="text-left">
-          <p>I am a first year PhD student in Computer Science at the University of Illinois at Urbana Champaign with research interest in machine learning and computer vision. I am a member of the <a href="http://vision.cs.illinois.edu/vision_website/">computer vision group</a> at UIUC, and I am currently doing research with Professors <a href="http://slazebni.cs.illinois.edu/">Svetlana Lazebnik</a> and <a href="http://www.alexander-schwing.de/">Alex Schwing</a>.</p>
-          <p>Before coming to UIUC I completed undergraduate degrees in Computer Science and Mathematics at Duke University.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- <section id="projects" class="container content-section text-left"></section> -->
+        <table class="container content-section text-left">
+            <tr>
+                <td width=30%></td>
+                <td width=5%></td>
+                <td width=65%></td>
+            </tr>
+            <tr>
+                <td><img src="images/weakly_supervised_teaser.png" width=100%></td>
+                <td></td>
+                <td>
+                    <h4><a href="">Multi-Object Tracking with Hallucinated and Unlabeled Videos</a></h4>
+                    <p>
+                        <b>Daniel McKee</b>, Bing Shuai, Andrew Berneshawi, Manchen Wang, Davide Modolo, Svetlana Lazebnik, Joseph Tighe
+                        <br>ArXiv preprint
+                        <br>
+                        <a href="weakly_supervised_tracking/index.html">Project page</a> |
+                        <a href="">Paper</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="images/dressing_in_order_small_cover.png" width=100%></td>
+                <td></td>
+                <td>
+                    <h4><a href="https://arxiv.org/abs/2104.07021">Dressing in Order: Recurrent Person Image Generation for Pose Transfer, Virtual Try-on and Outfit Editing</a></h4>
+                    <p>
+                        Aiyu Cui, <b>Daniel McKee</b>, Svetlana Lazebnik
+                        <br>ICCV 2021
+                        <br>
+                        <a href="https://cuiaiyu.github.io/dressing-in-order/">Project page</a> |
+                        <a href="https://arxiv.org/abs/2104.07021">Paper</a> |
+                        <a href="https://github.com/cuiaiyu/dressing-in-order">Code</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+
+    </section>
 
 
 
-  <!-- Contact section -->
 
-  <section id="contact" class="container content-section text-center">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h2>Contact Me</h2>
+    <!-- Contact section -->
+
+    <section id="contact" class="container content-section text-center">
         <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-2" id="contact-button">
-            <a id="github-button" href="https://github.com/dmckee5" type="button" class="btn btn-primary"> <i class="fa fa-github"></i> GitHub </a>
-          </div>
-          <div class="col-md-2" id="contact-button">
-            <a id="linkedin-button" href="https://linkedin.com/in/daniel-mckee" type="button" class="btn btn-primary"> <i class="fa fa-linkedin"></i> LinkedIn </a>
-          </div>
-          <div class="col-md-4"></div>
+            <div class="col-md-8 col-md-offset-2">
+                <h2>Contact Me</h2>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2" id="contact-button">
+                        <a id="github-button" href="https://github.com/dmckee5" type="button" class="btn btn-primary"> <i class="fa fa-github"></i> GitHub </a>
+                    </div>
+                    <div class="col-md-2" id="contact-button">
+                        <a id="linkedin-button" href="https://linkedin.com/in/daniel-mckee" type="button" class="btn btn-primary"> <i class="fa fa-linkedin"></i> LinkedIn </a>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+                <div class="row">
+                    <p>Email: dbmckee2 [at] illinois [dot] edu</p>
+                </div>
+            </div>
         </div>
-        <div class = "row">
-          <p>Email: dbmckee2 [at] illinois [dot] edu</p>
-        </div>
-      </div>
-    </div>
 
-  </section>
+    </section>
 
-  <footer>
-  </footer>
+    <footer>
+    </footer>
 
 
-  <script src="./index.js"></script>
+    <script src="./index.js"></script>
 
 </body>
 
