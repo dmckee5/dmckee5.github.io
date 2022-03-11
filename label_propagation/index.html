@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <title>Transfer of Representations to Video Label Propagation: Implementation Factors Matter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../index.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <section id="intro" class="container content-section text-center">
+        <table class="container content-section text-left"></table>
+        <div class="row">
+            <table>
+                <tr>
+                    <h2>Transfer of Representations to Video Label Propagation: Implementation Factors Matter</h2>
+                </tr>
+                <table align=center width=640px style="font-size:18px;">
+                    <tr>
+                        <br>
+                        <td width=160px>
+                            <span>Daniel McKee</span>
+                        </td>
+                        <td width=160px>
+                            <span>Zitong Zhan</span>
+                        </td>
+                        <td width=160px>
+                            <span>Bing Shuai</span>
+                        </td>
+                        <td width=160px>
+                            <span>Davide Modolo</span>
+                        </td>
+                    </tr>
+                </table>
+                <table align=center width=320px style="font-size:18px;">
+                    <tr>
+                        <td width=160px>
+                            <span>Joseph Tighe</span>
+                        </td>
+                        <td width=160px>
+                            <span>Svetlana Lazebnik</span>
+                        </td>
+                    </tr>
+                </table>
+                <tr>
+                    <br>
+                    <span style="font-size:16px">
+                    University of Illinois at Urbana-Champaign<br> Amazon Web Services<br>
+                </span>
+                </tr>
+            </table>
+            <table align=center width=300px style="font-size:20px;">
+                <tr>
+                    <br>
+                    <td width=150px>
+                        <span><a href='https://arxiv.org/abs/2203.05553' target="_blank"> [arXiv]</a></span>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <img width="500px" id="teaser" src="../images/label_propagation_teaser.png">
+                    <br>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <h3>Abstract</h3>
+            <div class="text-left">
+                <p>This work studies feature representations for dense label propagation in video, with a focus on recently proposed methods that learn video correspondence using self-supervised signals such as colorization or temporal cycle consistency.
+                    In the literature, these methods have been evaluated with an array of inconsistent settings, making it difficult to discern trends or compare performance fairly. Starting with a unified formulation of the label propagation algorithm
+                    that encompasses most existing variations, we systematically study the impact of important implementation factors in feature extraction and label propagation. Along the way, we report the accuracies of properly tuned supervised and
+                    unsupervised still image baselines, which are higher than those found in previous works. We also demonstrate that augmenting video-based correspondence cues with still-image-based ones can further improve performance. We then attempt
+                    a fair comparison of recent video-based methods on the DAVIS benchmark, showing convergence of best methods to performance levels near our strong ImageNet baseline, despite the usage of a variety of specialized video-based losses and
+                    training particulars. Additional comparisons on JHMDB and VIP datasets confirm the similar performance of current methods. We hope that this study will help to improve evaluation practices and better inform future research directions
+                    in temporal correspondence.
+                </p>
+
+            </div>
+    </section>
+</body>
+
+</html>
