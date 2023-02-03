@@ -4,6 +4,11 @@ nav {
 nav a {
   color: white;
 }
+/* Remove link underline */
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 .intro {
   background: url('./images/costa_rica.jpg') no-repeat bottom center scroll;
   -webkit-background-size: cover;
@@ -22,17 +27,28 @@ nav a {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+#link_buttons {
+  display: flex;
+  justify-content: space-around;
+}
 .intro h1 {
   font-size: 300%;
 }
 .content-section {
   padding: 50px;
+  font-size: 105%;
 }
 .content-section #contact-button {
   padding: 10px 0;
 }
 .content-section h2 {
-  font-size: 300%;
+  font-size: 180%;
+}
+#projects h4 {
+  font-size: 110%;
+}
+#intern_logos {
+  max-width: 120px;
 }
 .experience-list {
   margin-top: 50px;
