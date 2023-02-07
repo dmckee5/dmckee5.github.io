@@ -54,3 +54,43 @@ a:active { text-decoration: none; }
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.button_amazon {
+  background-color: #FF9900;
+  color: white;
+  border: none;
+  /* padding: 10px 20px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.button_uillinois {
+  background-color: #003366;
+  color: white;
+  border: none;
+  /* padding: 10px 20px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.button_adobe {
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  /* padding: 10px 20px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
