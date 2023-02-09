@@ -11,111 +11,218 @@
 
     gtag('config', 'G-GHV04V0Y92');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
     <title>Multi-Object Tracking with Hallucinated and Unlabeled Videos</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Custom CSS -->
-    <link href="../index.css" rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- <meta property="og:image" content="https://www.danielbmckee.com/images/paper_teaser.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1296">
+    <meta property="og:image:height" content="840"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.danielbmckee.com/weakly_supervised_tracking/"/>
+    <meta property="og:title" content="Multi-Object Tracking with Hallucinated and Unlabeled Videos" />
+    <!-- <meta property="og:description" content="" /> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;%F0%9F%8E%A5&lt;/text&gt;&lt;/svg&gt;">
 
+
+    <link rel="stylesheet" href="../project_page_template_files/bootstrap.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/font-awesome.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/codemirror.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/app.css">
+
+    <link rel="stylesheet" href="../project_page_template_files/bootstrap.min(1).css">
+
+    <script src="../project_page_template_files/jquery.min.js"></script>
+    <script src="../project_page_template_files/bootstrap.min.js"></script>
+    <script src="../project_page_template_files/codemirror.min.js"></script>
+    <script src="../project_page_template_files/clipboard.min.js"></script>
+    
+    <script src="../project_page_template_files/app.js"></script>
 </head>
 
 <body>
-    <section id="intro" class="container content-section text-center">
-        <table class="container content-section text-left"></table>
+    <div class="container" id="main">
         <div class="row">
-            <table>
-                <tr>
-                    <h2>Multi-Object Tracking with Hallucinated and Unlabeled Videos</h2>
-                </tr>
-                <table align=center width=720px style="font-size:18px;">
-                    <tr>
-                        <br>
-                        <td width=180px>
-                            <span>Daniel McKee</span>
-                        </td>
-                        <td width=180px>
-                            <span>Bing Shuai</span>
-                        </td>
-                        <td width=180px>
-                            <span>Andrew Berneshawi</span>
-                        </td>
-                        <td width=180px>
-                            <span>Manchen Wang</span>
-                        </td>
-                    </tr>
-                </table>
-                <table align=center width=540px style="font-size:18px;">
-                    <tr>
-                        <td width=180px>
-                            <span>Davide Modolo</span>
-                        </td>
-                        <td width=180px>
-                            <span>Svetlana Lazebnik</span>
-                        </td>
-                        <td width=180px>
-                            <span>Joseph Tighe</span>
-                        </td>
-                    </tr>
-                </table>
-                <tr>
-                    <br>
-                    <span style="font-size:16px">
-                    University of Illinois at Urbana-Champaign<br> Amazon Web Services<br>
-                </span>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <br>
-                    <span style="font-size:18px">Presented at CVPR 2021 Workshop on <a href="https://sites.google.com/view/luv2021" target="_blank">Learning from Unlabeled Videos</a><span>
-                </tr>
-            </table>
-            <table align=center width=300px style="font-size:20px;">
-                <tr>
-                    <br>
-                    <td width=150px>
-                        <span><a href='https://arxiv.org/abs/2108.08836' target="_blank"> [arXiv]</a></span>
-                    </td>
-                    <td width=150px>
-                        <span><a href='https://www.youtube.com/watch?v=Vayu2_s58nU' target="_blank"> [Video]</a></span>
-                    </td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <img width="500px" id="teaser" src="../images/weakly_supervised_teaser.png">
-                    <br>
-                </tr>
-            </table>
+            <h2 class="col-md-12 text-center">
+                Multi-Object Tracking with Hallucinated and Unlabeled Videos<br>
+                <small>
+                    <!-- Presented at CVPR 2021 Workshop on <a href="https://sites.google.com/view/luv2021" target="_blank">Learning from Unlabeled Videos</a> -->
+                    Presented at CVPR 2021 LUV Workshop
+                </small>
+            </h2>
         </div>
-    </section>
-
-
-    <section id="about" class="container content-section text-center">
         <div class="row">
-            <h3>Abstract</h3>
-            <div class="text-left">
-                <p>In this paper, we explore learning end-to-end deep neural trackers without tracking annotations. This is important as large-scale training data is essential for training deep neural trackers while tracking annotations are expensive to
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.danielbmckee.com/">
+                          Daniel McKee
+                        </a>
+                        <br>UIUC
+                    </li>
+                    <li>
+                        <a href="https://sites.google.com/site/beinshuai/">
+                          Bing Shuai
+                        </a>
+                        <br>AWS
+                    </li>
+                    <li>
+                        <a href="#">
+                          Andrew Berneshawi
+                        </a>
+                        <br>AWS
+                    </li>
+                    <li>
+                        <a href="#">
+                            Manchen Wang
+                        </a>
+                        <br>AWS
+                    </li>
+                    <br>
+                    <li>
+                        <a href="https://davidemodolo.wordpress.com/">
+                            Davide Modolo
+                        </a>
+                        <br>AWS
+                    </li>
+                    <li>
+                        <a href="https://slazebni.cs.illinois.edu/">
+                          Svetlana Lazebnik
+                        </a>
+                        <br>UIUC
+                    </li>
+                    <li>
+                        <a href="https://jovapo.github.io/">
+                          Joseph Tighe
+                        </a>
+                        <br>AWS
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2108.08836">
+                            <img src="./paper_thumbnail.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=Vayu2_s58nU">
+                            <img src="../project_page_template_files/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://storage.googleapis.com/data.zip" target="popup" onclick="window.open(&#39;http://storage.googleapis.com/data.zip&#39;,&#39;popup&#39;,&#39;width=600,height=400&#39;)">
+                            <img src="../project_page_template_files/database_icon.png" height="60px">
+                                <h4><strong>Dataset</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/user/project">
+                            <img src="../project_page_template_files/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div> -->
+
+        <!-- Links -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a id="materials_links" href='https://arxiv.org/abs/2108.08836' target="_blank"> [arXiv]</a>
+                    </li>
+                    <li>
+                        <a id="materials_links" href='https://www.youtube.com/watch?v=Vayu2_s58nU' target="_blank"> [Video]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Header Image -->
+        <div class="row" id="header_img">
+            <figure class="col-md-6 col-md-offset-3">
+            <img src="../images/weakly_supervised_teaser.png" class="img-responsive" alt="overview">
+                <figcaption>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Abstract -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    In this paper, we explore learning end-to-end deep neural trackers without tracking annotations. This is important as large-scale training data is essential for training deep neural trackers while tracking annotations are expensive to
                     acquire. In place of tracking annotations, we first hallucinate videos from images with bounding box annotations using zoom-in/out motion transformations to obtain free tracking labels. We add video simulation augmentations to create
                     a diverse tracking dataset, albeit with simple motion. Next, to tackle harder tracking cases, we mine hard examples across an unlabeled pool of real videos with a tracker trained on our hallucinated video data. For hard example mining,
                     we propose an optimization-based connecting process to first identify and then rectify hard examples from the pool of unlabeled videos. Finally, we train our tracker jointly on hallucinated data and mined hard video examples. Our weakly
                     supervised tracker achieves state-of-the-art performance on the MOT17 and TAO-person datasets. On MOT17, we further demonstrate that the combination of our self-generated data and the existing manually-annotated data leads to additional
                     improvements.
                 </p>
-
             </div>
-    </section>
-</body>
+        </div>
 
-</html>
+        <!-- Video -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <iframe class="embedded_video" src="https://www.youtube.com/embed/Vayu2_s58nU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">@article{mckee2021multi,
+    title={Multi-object tracking with hallucinated and unlabeled videos},
+    author={McKee, Daniel and Shuai, Bing and Berneshawi, Andrew and Wang, Manchen and Modolo, Davide and Lazebnik, Svetlana and Tighe, Joseph},
+    journal={arXiv preprint arXiv:2108.08836},
+    year={2021}
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    Acknowlegdements
+                </p> -->
+                
+                <p style="text-align:right">Website template credit: <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://jonbarron.info/">Jon Barron</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</body></html>

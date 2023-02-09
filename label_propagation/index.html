@@ -11,88 +11,126 @@
 
     gtag('config', 'G-GHV04V0Y92');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
     <title>Transfer of Representations to Video Label Propagation: Implementation Factors Matter</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Custom CSS -->
-    <link href="../index.css" rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">
+    <!-- <meta property="og:image" content="https://www.danielbmckee.com/images/label_propagation_teaser.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1296">
+    <meta property="og:image:height" content="840"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.danielbmckee.com/label_propagation/"/>
+    <meta property="og:title" content="Transfer of Representations to Video Label Propagation: Implementation Factors Matter" />
+    <!-- <meta property="og:description" content="" /> -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;%F0%9F%94%8E&lt;/text&gt;&lt;/svg&gt;">
 
+    <link rel="stylesheet" href="../project_page_template_files/bootstrap.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/font-awesome.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/codemirror.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/app.css">
+
+    <link rel="stylesheet" href="../project_page_template_files/bootstrap.min(1).css">
+
+    <script src="../project_page_template_files/jquery.min.js"></script>
+    <script src="../project_page_template_files/bootstrap.min.js"></script>
+    <script src="../project_page_template_files/codemirror.min.js"></script>
+    <script src="../project_page_template_files/clipboard.min.js"></script>
+    
+    <script src="../project_page_template_files/app.js"></script>
 </head>
 
 <body>
-    <section id="intro" class="container content-section text-center">
-        <table class="container content-section text-left"></table>
+    <div class="container" id="main">
         <div class="row">
-            <table>
-                <tr>
-                    <h2>Transfer of Representations to Video Label Propagation: Implementation Factors Matter</h2>
-                </tr>
-                <table align=center width=640px style="font-size:18px;">
-                    <tr>
-                        <br>
-                        <td width=160px>
-                            <span>Daniel McKee</span>
-                        </td>
-                        <td width=160px>
-                            <span>Zitong Zhan</span>
-                        </td>
-                        <td width=160px>
-                            <span>Bing Shuai</span>
-                        </td>
-                        <td width=160px>
-                            <span>Davide Modolo</span>
-                        </td>
-                    </tr>
-                </table>
-                <table align=center width=320px style="font-size:18px;">
-                    <tr>
-                        <td width=160px>
-                            <span>Joseph Tighe</span>
-                        </td>
-                        <td width=160px>
-                            <span>Svetlana Lazebnik</span>
-                        </td>
-                    </tr>
-                </table>
-                <tr>
-                    <br>
-                    <span style="font-size:16px">
-                    University of Illinois at Urbana-Champaign<br> Amazon Web Services<br>
-                </span>
-                </tr>
-            </table>
-            <table align=center width=300px style="font-size:20px;">
-                <tr>
-                    <br>
-                    <td width=150px>
-                        <span><a href='https://arxiv.org/abs/2203.05553' target="_blank"> [arXiv]</a></span>
-                    </td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <img width="500px" id="teaser" src="../images/label_propagation_teaser.png">
-                    <br>
-                </tr>
-            </table>
+            <h2 class="col-md-12 text-center">
+                Transfer of Representations to Video Label Propagation: <br> Implementation Factors Matter<br>
+                <!-- <small>
+								ArXiv Preprint
+                </small> -->
+            </h2>
         </div>
-    </section>
-    <section id="about" class="container content-section text-center">
         <div class="row">
-            <h3>Abstract</h3>
-            <div class="text-left">
-                <p>This work studies feature representations for dense label propagation in video, with a focus on recently proposed methods that learn video correspondence using self-supervised signals such as colorization or temporal cycle consistency.
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.danielbmckee.com/">
+                          Daniel McKee
+                        </a>
+                        <br>UIUC
+                    </li>
+                    <li>
+                        <a href="#">
+                          Zitong Zhan
+                        </a>
+                        <br>UIUC
+                    </li>
+                    <li>
+                        <a href="https://sites.google.com/site/beinshuai/">
+                          Bing Shuai
+                        </a>
+                        <br>AWS
+                    </li><br>
+                    <li>
+                        <a href="https://davidemodolo.wordpress.com/">
+                            Davide Modolo
+                        </a>
+                        <br>AWS
+                    </li>
+                    <li>
+                        <a href="https://jovapo.github.io/">
+                          Joseph Tighe
+                        </a>
+                        <br>AWS
+                    </li>
+                    <li>
+                        <a href="https://slazebni.cs.illinois.edu/">
+                          Svetlana Lazebnik
+                        </a>
+                        <br>UIUC
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- Links -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a id="materials_links" href='https://arxiv.org/abs/2203.05553' target="_blank">[arXiv]</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Header image -->
+        <div class="row" id="header_img">
+            <figure class="col-md-6 col-md-offset-3">
+            <img src="../images/label_propagation_teaser.png" class="img-responsive" alt="overview">
+                <figcaption>
+                </figcaption>
+            </figure>
+        </div>
+
+
+        <!-- Abstract -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    This work studies feature representations for dense label propagation in video, with a focus on recently proposed methods that learn video correspondence using self-supervised signals such as colorization or temporal cycle consistency.
                     In the literature, these methods have been evaluated with an array of inconsistent settings, making it difficult to discern trends or compare performance fairly. Starting with a unified formulation of the label propagation algorithm
                     that encompasses most existing variations, we systematically study the impact of important implementation factors in feature extraction and label propagation. Along the way, we report the accuracies of properly tuned supervised and
                     unsupervised still image baselines, which are higher than those found in previous works. We also demonstrate that augmenting video-based correspondence cues with still-image-based ones can further improve performance. We then attempt
@@ -100,9 +138,41 @@
                     training particulars. Additional comparisons on JHMDB and VIP datasets confirm the similar performance of current methods. We hope that this study will help to improve evaluation practices and better inform future research directions
                     in temporal correspondence.
                 </p>
-
             </div>
-    </section>
-</body>
+        </div>
 
-</html>
+
+        <!-- Citation -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">@article{mckee2022transfer,
+    title={Transfer of Representations to Video Label Propagation: Implementation Factors Matter},
+    author={McKee, Daniel and Zhan, Zitong and Shuai, Bing and Modolo, Davide and Tighe, Joseph and Lazebnik, Svetlana},
+    journal={arXiv preprint arXiv:2203.05553},
+    year={2022}
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    Acknowlegdements
+                </p> -->
+                
+                <p style="text-align:right">Website template credit: <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://jonbarron.info/">Jon Barron</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</body></html>

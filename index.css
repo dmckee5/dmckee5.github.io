@@ -23,8 +23,8 @@ a:active { text-decoration: none; }
   padding: 20% 0;
 }
 #my_face {
-  max-height: 350px;
-  padding-top: 50px;
+  max-width: 300px;
+  padding-top: 60px;
   padding-bottom: 50px;
 }
 #link_buttons {
