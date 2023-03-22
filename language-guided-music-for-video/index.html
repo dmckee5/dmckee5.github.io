@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHV04V0Y92"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GHV04V0Y92');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Language-Guided Music Recommendation for Video via Prompt Analogies</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- <meta property="og:image" content="https://www.danielbmckee.com/images/paper_teaser.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1296">
+    <meta property="og:image:height" content="840"> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.danielbmckee.com/language-guided-music-for-video/"/>
+    <meta property="og:title" content="Language-Guided Music Recommendation for Video via Prompt Analogies" />
+    <!-- <meta property="og:description" content="" /> -->
+
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;%F0%9F%8E%B5&lt;/text&gt;&lt;/svg&gt;">
+
+
+    <link rel="stylesheet" href="../project_page_template_files/bootstrap.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/font-awesome.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/codemirror.min.css">
+    <link rel="stylesheet" href="../project_page_template_files/app.css">
+
+    <link rel="stylesheet" href="../project_page_template_files/bootstrap.min(1).css">
+
+    <script src="../project_page_template_files/jquery.min.js"></script>
+    <script src="../project_page_template_files/bootstrap.min.js"></script>
+    <script src="../project_page_template_files/codemirror.min.js"></script>
+    <script src="../project_page_template_files/clipboard.min.js"></script>
+    
+    <script src="../project_page_template_files/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Language-Guided Music Recommendation for Video via Prompt Analogies<br>
+                <small>
+                    CVPR 2023
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://www.danielbmckee.com/">
+                          Daniel McKee
+                        </a>
+                        <br>UIUC
+                    </li>
+                    <li>
+                        <a href="https://www.justinsalamon.com/">
+                          Justin Salamon
+                        </a>
+                        <br>Adobe
+                    </li>
+                    <li>
+                        <a href="http://people.ciirc.cvut.cz/~sivic/">
+                          Josef Sivic
+                        </a>
+                        <br>Adobe
+                    </li>
+                    <li>
+                        <a href="https://bryanrussell.org/">
+                            Bryan Russell
+                        </a>
+                        <br>Adobe
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="">
+                            <img src="./paper_thumbnail.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <img src="../project_page_template_files/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://storage.googleapis.com/data.zip" target="popup" onclick="window.open(&#39;http://storage.googleapis.com/data.zip&#39;,&#39;popup&#39;,&#39;width=600,height=400&#39;)">
+                            <img src="../project_page_template_files/database_icon.png" height="60px">
+                                <h4><strong>Dataset</strong></h4>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://github.com/user/project">
+                            <img src="../project_page_template_files/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+        </div> -->
+
+        <!-- Links -->
+        <!-- <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a id="materials_links" href='arxiv.org' target="_blank"> [arXiv]</a>
+                    </li>
+                    <li>
+                        <a id="materials_links" href='' target="_blank"> [Video]</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+
+        <!-- Header Image -->
+        <!-- <div class="row" id="header_img">
+            <figure class="col-md-6 col-md-offset-3">
+            <img src="../images/none.png" class="img-responsive" alt="overview">
+                <figcaption>
+                </figcaption>
+            </figure>
+        </div> -->
+
+        <!-- Abstract -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    We propose a method to recommend music for an input video while allowing a user to guide music selection with free-form natural language. 
+                    A key challenge of this problem setting is that existing music video datasets provide the needed (video, music) training pairs, but lack 
+                    text descriptions of the music. This work addresses this challenge with the following three contributions. First, we propose a text-synthesis 
+                    approach that relies on an analogy-based prompting procedure to generate natural language music descriptions from a large-scale language model 
+                    (BLOOM-176B) given pre-trained music tagger outputs and a small number of human text descriptions. Second, we use these synthesized music 
+                    descriptions to train a new trimodal model, which fuses text and video input representations to query music samples. For training, we introduce 
+                    a text dropout regularization mechanism which we show is critical to model performance. Our model design allows for the retrieved music audio to 
+                    agree with the two input modalities by matching visual style depicted in the video and musical genre, mood, or instrumentation described in the 
+                    natural language query. Third, to evaluate our approach, we collect a testing dataset for our problem by annotating a subset of 4k clips from the 
+                    YT8M-MusicVideo dataset with natural language music descriptions. We show that our approach can match or exceed the performance of prior methods 
+                    on video-to-music retrieval while significantly improving retrieval accuracy when using text guidance.
+                </p>
+            </div>
+        </div>
+
+        <!-- Video -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Demo Video Coming Soon!
+                </h3>
+                <!-- <div class="text-center">
+                    <iframe class="embedded_video" src="youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Citation -->
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">@article{mckee2023language,....
+}</textarea>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    Acknowlegdements
+                </p> -->
+                
+                <p style="text-align:right">Website template credit: <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://jonbarron.info/">Jon Barron</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</body></html>
