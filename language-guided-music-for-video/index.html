@@ -46,6 +46,31 @@
     <script src="../project_page_template_files/clipboard.min.js"></script>
     
     <script src="../project_page_template_files/app.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      </style>
+
+
+    <style>
+        .player-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .player-container video {
+            margin-right: 10px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -54,98 +79,168 @@
             <h2 class="col-md-12 text-center">
                 Language-Guided Music Recommendation for Video via Prompt Analogies<br>
                 <small>
-                    CVPR 2023
+                    CVPR 2023 - Highlight Paper
                 </small>
             </h2>
         </div>
+
+
+        <!-- Authors and Affiliations -->
         <div class="row">
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
                         <a href="https://www.danielbmckee.com/">
-                          Daniel McKee
+                          Daniel McKee<sup>♪</sup>
                         </a>
-                        <br>UIUC
                     </li>
                     <li>
                         <a href="https://www.justinsalamon.com/">
-                          Justin Salamon
+                          Justin Salamon<sup>♫</sup>
                         </a>
-                        <br>Adobe
                     </li>
                     <li>
                         <a href="http://people.ciirc.cvut.cz/~sivic/">
-                          Josef Sivic
+                          Josef Sivic<sup>♫,♬</sup>
                         </a>
-                        <br>Adobe
                     </li>
                     <li>
                         <a href="https://bryanrussell.org/">
-                            Bryan Russell
+                            Bryan Russell<sup>♫</sup>
                         </a>
-                        <br>Adobe
+                    </li>
+                </ul>
+                <ul class="list-inline">
+                    <li>
+                        ♪ University of Illinois at Urbana-Champaign
+                    </li>
+                    <li>
+                        ♫ Adobe Research
+                    </li>
+                    <li>
+                        ♬ CIIRC, CTU in Prague
                     </li>
                 </ul>
             </div>
         </div>
 
 
-        <!-- <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
+        <!-- Materials Links -->
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="">
+                            <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/McKee_Language-Guided_Music_Recommendation_for_Video_via_Prompt_Analogies_CVPR_2023_paper.pdf">
                             <img src="./paper_thumbnail.png" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://www.youtube.com/watch?v=z6DBTAiLKzY">
                             <img src="../project_page_template_files/youtube_icon.png" height="60px">
                                 <h4><strong>Video</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="http://storage.googleapis.com/data.zip" target="popup" onclick="window.open(&#39;http://storage.googleapis.com/data.zip&#39;,&#39;popup&#39;,&#39;width=600,height=400&#39;)">
+                            <a href="https://www.danielbmckee.com/language-guided-music-for-video/">
                             <img src="../project_page_template_files/database_icon.png" height="60px">
-                                <h4><strong>Dataset</strong></h4>
+                                <h4><strong>Dataset<br>(coming soon!)</strong></h4>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="https://github.com/user/project">
                             <img src="../project_page_template_files/github.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
-                        </li> 
+                        </li>  -->
                     </ul>
                 </div>
-        </div> -->
+        </div>
 
-        <!-- Links -->
+
+
+
+
+        <!-- Demo -->
         <div class="row">
-            <div class="col-md-12 text-center">
-                <ul class="list-inline">
-                    <li>
-                        <a id="materials_links" href='./CVPR_2023_Language_Guided_Music_Recommendation_for_Video.pdf' target="_blank"> [PDF]</a>
-                    </li>
-                    <!-- <li>
-                        <a id="materials_links" href='arxiv.org' target="_blank"> [arXiv]</a>
-                    </li>
-                    <li>
-                        <a id="materials_links" href='' target="_blank"> [Video]</a>
-                    </li> -->
-                </ul>
+            <!-- <div class="col-md-8 col-md-offset-2">
+                <h3>Demo</h3>
+            </div> -->
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row justify-content-center">
+                    <div class="player-container">
+                        <div class="col-md-8">
+                            <h4 class="text-center">Input Video</h4>
+                            <video id="video" src="snowboarding_trimmed.mp4" class="mx-auto d-block" style="width: 100%;"></video>
+                        </div>
+                        <div class="col-md-10">
+                            <h4 class="text-center">Query text and retrieved music</h4>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <button class="btn btn-light play-button" data-audio="audio1" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 10px;"><i class="bi bi-play-fill" style="color: black; font-size: 20px;"></i></button>
+                                <code>[Video only]</code>
+                                <audio id="audio1" style="display: none;">
+                                    <source src="snowboarding_none.m4a" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <button class="btn btn-light play-button" data-audio="audio2" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 10px;"><i class="bi bi-play-fill" style="color: black; font-size: 20px;"></i></button>
+                                <code>Hard rock featuring electric guitar riff</code>
+                                <audio id="audio2" style="display: none;">
+                                    <source src="snowboarding_rock.m4a" type="audio/mpeg">
+                                </audio>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <button class="btn btn-light play-button" data-audio="audio3" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-right: 10px;"><i class="bi bi-play-fill" style="color: black; font-size: 20px;"></i></button>
+                                <code>Hip-hop beat with heavy synth bass</code>
+                                <audio id="audio3" style="display: none;">
+                                    <source src="snowboarding_hiphop.m4a" type="audio/mpeg">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <script>
+                    var video = document.getElementById('video');
+                    var currAudio = '';
+            
+                    var buttons = document.querySelectorAll('.play-button');
+            
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].addEventListener('click', function() {
+                            var audioId = this.getAttribute('data-audio');
+                            var audio = document.getElementById(audioId);
+                            var icon = this.getElementsByTagName('i')[0];
+            
+                            if (currAudio && currAudio !== audio) {
+                                currAudio.pause();
+                                currAudio.currentTime = 0;
+                                video.pause();
+                                video.currentTime = 0;
+                                var currIcon = document.querySelector('[data-audio="' + currAudio.id + '"] i');
+                                currIcon.classList.remove('bi-pause-fill');
+                                currIcon.classList.add('bi-play-fill');
+                            }
+            
+                            if (audio.paused) {
+                                audio.play();
+                                video.play();
+                                icon.classList.remove('bi-play-fill');
+                                icon.classList.add('bi-pause-fill');
+                            } else {
+                                audio.pause();
+                                video.pause();
+                                icon.classList.remove('bi-pause-fill');
+                                icon.classList.add('bi-play-fill');
+                            }
+            
+                            currAudio = audio;
+                        });
+                    }
+                </script>
             </div>
         </div>
 
-        <!-- Header Image -->
-        <!-- <div class="row" id="header_img">
-            <figure class="col-md-6 col-md-offset-3">
-            <img src="../images/none.png" class="img-responsive" alt="overview">
-                <figcaption>
-                </figcaption>
-            </figure>
-        </div> -->
 
         <!-- Abstract -->
         <div class="row">
@@ -168,6 +263,7 @@
                 </p>
             </div>
         </div>
+        
 
         <!-- Video -->
         <div class="row">
@@ -181,19 +277,141 @@
             </div>
         </div>
 
+        <br>
+
+
+        <!-- Overview -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+
+                <h4>
+                    Training Data Synthesis
+                </h4>
+                <p class="text-justify">
+                    We propose to generate music descriptions automatically from a large-scale language model (BLOOM-176B) given pre-trained music tagger outputs and a small number of human text descriptions.
+                </p>
+                <img src="prompt.gif" alt="Animated GIF" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+
+                <br>
+                <h4>
+                    Tri-modal <code>ViML</code> Model
+                </h4>
+                <p class="text-justify">
+                    We train a tri-modal model, which we call <code>ViML</code> for <code>Vi</code>deo to <code>M</code>usic with <code>L</code>anguage. The model fuses text and video input representations to query music samples. 
+                    We rely on per-modality Transformer encoders to encode sequences of features from base encoders (CLIP and DeepSim) and a fusion model to combine the video and text encodings. For training, we introduce a text dropout regularization mechanism which we show is critical to model performance. 
+                </p>
+                <img src="model_diagram.svg" alt="Model diagram" style="display: block; margin-left: auto; margin-right: auto; width: 70%;">
+
+                <br>
+                <h4>
+                    YouTube-MTC Dataset
+                </h4>
+                <p class="text-justify">
+                    For evaluation, we collect a dataset by annotating 4k clips from music videos in the YouTube8M dataset with natural language music descriptions. 
+                    These text descriptions are collected by providing annotators with audio only (no video), and contain diverse descriptions of different elements 
+                    of the music like genre, mood, instrumentation, and lyrics.
+                </p>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="text-center" style="max-width: 200px">
+                            <h5>Source Video</h5>
+                            <a href="https://www.youtube.com/watch?v=sdKN2YzJxbY&t=89s">
+                                <img src="yt8m_annotation_examples/ex1_blur.png" class="img-responsive" alt="overview">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="text-center">
+                            <h5>Music Description Annotation</h5>
+                            <code>
+                            A faint, simple acoustic piece of singing by a female vocalist with an acoustic guitar with a fast-paced strumming pattern in a closed room recorded live. great for singing along.
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="text-center" style="max-width: 200px">
+                            <a href="https://youtu.be/ze7p3GvtJDg?t=81">
+                                <img src="yt8m_annotation_examples/ex3_blur.png" class="img-responsive" alt="overview">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="text-center">
+                            <code>
+                                Instrumental track featuring an ambient pad and bell-like sounds. Seems to be a film score.
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="text-center" style="max-width: 200px">
+                            <a href="https://youtu.be/vAkBE67nc50?t=157">
+                                <img src="yt8m_annotation_examples/ex2_blur.png" class="img-responsive" alt="overview">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="text-center">
+                            <code>
+                                Hip-hop track with a dark synth pad with male aggressive rapping along with a chipmunk voice.
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <br>
         <!-- Citation -->
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Citation
                 </h3>
-                <div class="form-group col-md-10 col-md-offset-1">
-                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">@article{mckee2023language,....
+                <!-- <div class="form-group col-md-10 col-md-offset-1"> -->
+<textarea id="bibtex" class="form-control" readonly="" style="display: none;">@InProceedings{McKee_2023_CVPR, 
+  author = {McKee, Daniel and Salamon, Justin and Sivic, Josef and Russell, Bryan},
+  title = {Language-Guided Music Recommendation for Video via Prompt Analogies},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2023},
 }</textarea>
-                </div>
             </div>
-        </div> -->
+        </div>
 
+        <!-- Credits -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Music/Video Credits
+                </h3>
+                <!-- <h4>Video</h4> -->
+                <p>
+                    Ronstik, <a href="https://stock.adobe.com/video/snowboarder-on-track-in-alpine-mountains/74179497">Snowboarder</a>, Adobe Stock Extended license
+                </p>
+                <!-- <h4>Music</h4> -->
+                <p>
+                Project 5am, <a href="http://freemusicarchive.org/music/Project_5am/The_Cecilia_Way/Lila">“Lila”</a>, CC BY-NC-ND 4.0, used with permission 
+                </p>
+                <p>
+                Sick To The Back Teeth, <a href="http://freemusicarchive.org/music/Sick_To_The_Back_Teeth/Grit_1520/02_sick_to_the_back_teeth_-_irradiated_dub">“Irradiated Dub”</a>, CC BY-NC-SA 3.0, used with permission
+                <p>
+                Room For A Ghost, <a href="http://freemusicarchive.org/music/Room_For_A_Ghost/3_Song_EP/room_for_a_ghost_-__No02">“No.02”</a>, CC BY 3.0
+                </p>
+                
+            </div>
+        </div>
+
+        <!-- Acknowledgements -->
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <!-- <h3>
